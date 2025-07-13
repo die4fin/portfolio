@@ -1,0 +1,409 @@
+/* Base Styles & Global Variables */
+:root {
+    --color-primary-green: #00ff00; /* Pure vibrant green */
+    --color-accent-green: #00cc00; /* Slightly darker green */
+    --color-darkest-black: #000000;
+    --color-deep-dark-gray: #0a0a0a;
+    --color-medium-dark-gray: #1a1a1a;
+    --color-light-gray: #e2e8f0;
+    --color-text-secondary: #94a3b8;
+    --color-text-tertiary: #64748b;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Dynamic conic gradient background with subtle animation */
+    background: conic-gradient(from var(--angle), var(--color-medium-dark-gray) 0%, var(--color-deep-dark-gray) 25%, var(--color-darkest-black) 50%, var(--color-deep-dark-gray) 75%, var(--color-medium-dark-gray) 100%);
+    background-size: 200% 200%; /* Larger background to allow movement */
+    animation: backgroundPan 30s linear infinite alternate; /* Slow, subtle pan animation */
+    color: var(--color-light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 4rem; /* Adjusted space for fixed navbar */
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+@keyframes backgroundPan {
+    0% { background-position: 0% 0%; --angle: 0deg; }
+    100% { background-position: 100% 100%; --angle: 360deg; }
+}
+
+/* Container & Responsive Layout */
+.container {
+    width: 100%;
+    max-width: 1100px; /* Even wider max-width for epic feel */
+    padding: 0 1.5rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+@media (min-width: 640px) {
+    .container { padding: 0 2rem; }
+}
+@media (min-width: 1024px) {
+    .container { padding: 0 3rem; }
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2.5rem; /* More space below title */
+    font-weight: 800; /* Extra bold title */
+    color: var(--color-light-gray);
+    text-shadow: 0 3px 6px rgba(0,0,0,0.5); /* Stronger text shadow */
+    letter-spacing: 0.05em; /* Subtle letter spacing */
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -12px; /* Lower the underline */
+    width: 80%; /* Even wider underline */
+    height: 6px; /* Thicker underline */
+    background: linear-gradient(to right, var(--color-primary-green), var(--color-accent-green)); /* Vibrant green gradient */
+    border-radius: 9999px;
+    box-shadow: 0 3px 10px rgba(0, 255, 0, 0.6); /* Intense glowing green effect */
+}
+
+/* Cards */
+.card {
+    background-color: var(--color-medium-dark-gray); /* Slightly lighter dark background for cards */
+    border-radius: 1.5rem; /* Even more rounded corners */
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 8px 15px -4px rgba(0, 0, 0, 0.3); /* Deeper, more dramatic shadow */
+    padding: 3rem; /* More padding */
+    margin-bottom: 3rem; /* More margin */
+    border: 1px solid rgba(var(--color-primary-green), 0.1); /* Very subtle green border */
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background-color 0.4s ease-out, border-color 0.4s ease-out; /* Smoother transition for hover */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure content is above pseudo-elements */
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"><g fill="%23111827" fill-opacity="0.15"><path d="M98 0H2v100h96V0zM100 98H0V2h100v96z" fill-rule="evenodd"/></g></svg>'); /* Subtle geometric pattern, adjusted color and opacity */
+    background-size: 25px 25px; /* Slightly larger pattern */
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1; /* Behind content */
+}
+.card:hover {
+    transform: translateY(-12px) scale(1.015); /* More lift and slight zoom on hover */
+    box-shadow: 0 30px 50px -10px rgba(0, 0, 0, 0.8), 0 12px 20px -6px rgba(0, 0, 0, 0.4); /* Even deeper, more intense shadow on hover */
+    background-color: var(--color-deep-dark-gray); /* Darker on hover */
+    border-color: rgba(var(--color-primary-green), 0.4); /* More visible green border on hover */
+}
+
+/* Experience Items */
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+.experience-item .icon {
+    flex-shrink: 0;
+    margin-right: 1.75rem; /* More spacing */
+    color: var(--color-primary-green);
+    font-size: 2.5rem; /* Larger icons */
+    filter: drop-shadow(0 3px 8px rgba(0, 255, 0, 0.7)); /* Stronger glowing green icon effect */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.experience-item:hover .icon {
+    transform: scale(1.2) rotate(-8deg); /* More pronounced icon animation */
+    filter: drop-shadow(0 5px 12px rgba(0, 255, 0, 1)); /* Brighter glow on hover */
+}
+.experience-item .content {
+    flex-grow: 1;
+}
+.text-gray-600 { color: var(--color-text-secondary); }
+.text-gray-500 { color: var(--color-text-tertiary); }
+.text-gray-300 { color: #cbd5e1; } /* Adjusted for better readability on dark */
+.text-gray-400 { color: #94a3b8; } /* Adjusted for better readability on dark */
+
+/* Skill Badges */
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(to right, var(--color-medium-dark-gray), var(--color-deep-dark-gray)); /* Dark gradient background */
+    color: var(--color-light-gray);
+    padding: 0.6rem 1.5rem; /* More padding */
+    border-radius: 9999px;
+    font-size: 1rem; /* Slightly larger font */
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3); /* Stronger shadow */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4); /* Subtle text shadow on badges */
+}
+.skill-badge:hover {
+    background: linear-gradient(to right, var(--color-primary-green), var(--color-accent-green)); /* Vibrant green gradient on hover */
+    color: var(--color-darkest-black); /* Black text on green hover */
+    transform: scale(1.1); /* More pronounced enlarge on hover */
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.6); /* Enhanced glowing shadow on hover */
+    text-shadow: none; /* Remove text shadow on hover for crispness */
+}
+.skill-badge button {
+    margin-left: 1rem; /* More space for sparkle */
+    background: none;
+    border: none;
+    color: var(--color-primary-green); /* Green sparkle button */
+    cursor: pointer;
+    font-size: 1.3rem; /* Larger sparkle icon */
+    line-height: 1;
+    padding: 0;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.skill-badge button:hover {
+    color: var(--color-light-gray); /* White sparkle on hover */
+    transform: rotate(35deg) scale(1.3); /* More dramatic rotation and scale */
+}
+
+/* Modal for LLM response */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Darker, more opaque overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); /* More blur */
+}
+.modal-content {
+    background-color: var(--color-medium-dark-gray); /* Darker modal background */
+    color: var(--color-light-gray);
+    padding: 35px; /* More padding */
+    border-radius: 1.5rem; /* More rounded */
+    box-shadow: 0 25px 45px -10px rgba(0, 0, 0, 0.8), 0 10px 20px -5px rgba(0, 0, 0, 0.4); /* Even deeper shadow */
+    width: 95%;
+    max-width: 700px; /* Wider modal */
+    position: relative;
+    border: 1px solid rgba(var(--color-primary-green), 0.3); /* Green border */
+    animation: fadeInScale 0.5s ease-out; /* Slower animation */
+}
+.close-button {
+    color: var(--color-text-secondary);
+    font-size: 40px; /* Even larger close button */
+    font-weight: bold;
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-primary-green); /* Green on hover */
+    transform: rotate(180deg); /* Full rotation */
+}
+.spinner {
+    border: 5px solid var(--color-deep-dark-gray); /* Darker spinner base */
+    border-top: 5px solid var(--color-primary-green); /* Vibrant green spinner top */
+    border-radius: 50%;
+    width: 50px; /* Larger spinner */
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 35px auto; /* More margin */
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* General Text & Links */
+h1, h2, h3 { color: var(--color-light-gray); }
+a {
+    color: var(--color-primary-green); /* Green links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+a:hover {
+    color: var(--color-accent-green); /* Darker green on hover */
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.5); /* Subtle glow on hover */
+}
+ul.list-disc li { color: #cbd5e1; } /* Light list item text */
+ul.list-circle li { list-style-type: circle; } /* Specific list style */
+.leading-relaxed { line-height: 1.75; } /* Enhanced readability */
+
+/* Custom text-shadow utility */
+.text-shadow-md {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+    .text-4xl { font-size: 4rem; }
+    .text-xl { font-size: 2rem; }
+    .text-2xl { font-size: 2.75rem; }
+    .card { padding: 3.5rem; }
+}
+@media (min-width: 768px) {
+    .container { max-width: 1000px; }
+    .text-4xl { font-size: 4.5rem; }
+    .text-xl { font-size: 2.25rem; }
+    .text-2xl { font-size: 3rem; }
+}
+@media (min-width: 1024px) {
+    .container { max-width: 1200px; }
+    .text-4xl { font-size: 5rem; }
+    .text-xl { font-size: 2.5rem; }
+    .text-2xl { font-size: 3.5rem; }
+}
+
+/* Image Zoom Effect */
+.grid img {
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Stronger initial shadow */
+}
+.grid img:hover {
+    transform: scale(1.1); /* More pronounced zoom in on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6); /* Even stronger shadow on hover */
+}
+
+/* Fade-in on Scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px); /* More pronounced initial translation */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Slower, smoother animation */
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar Specific Styles */
+.navbar {
+    background-color: var(--color-darkest-black); /* Pure black for navbar */
+    backdrop-filter: blur(10px); /* More blur */
+    border-bottom: 1px solid rgba(var(--color-primary-green), 0.4); /* Stronger green border */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6); /* Stronger shadow */
+    z-index: 1000; /* Ensure it's on top */
+    padding-top: 0.75rem; /* Adjusted padding */
+    padding-bottom: 0.75rem; /* Adjusted padding */
+}
+.nav-link {
+    color: var(--color-light-gray);
+    font-weight: 600;
+    padding: 0.6rem 1rem; /* Adjusted padding */
+    border-radius: 0.75rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.nav-link:hover {
+    background-color: rgba(var(--color-primary-green), 0.2); /* More visible green tint on hover */
+    color: var(--color-primary-green); /* Vibrant green text on hover */
+    transform: translateY(-3px); /* More subtle lift */
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4);
+}
+.nav-link.active {
+    background: linear-gradient(to right, var(--color-primary-green), var(--color-accent-green)); /* Solid green gradient for active link */
+    color: var(--color-darkest-black); /* Black text on active green */
+    box-shadow: 0 3px 12px rgba(0, 255, 0, 0.8); /* Intense glow for active */
+    transform: translateY(-2px);
+    text-shadow: none;
+}
+.navbar-logo {
+    font-size: 2.2rem; /* Adjusted logo text size */
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 5px rgba(0, 255, 0, 0.5);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.navbar-logo:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px var(--color-primary-green);
+}
+
+/* Footer Specific Styles */
+.main-footer {
+    background-color: var(--color-darkest-black); /* Pure black for footer */
+    border-top: 1px solid rgba(var(--color-primary-green), 0.4); /* Stronger green border */
+    padding: 3rem 1.5rem; /* More padding */
+    margin-top: 4rem; /* More space from last section */
+    width: 100%;
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.6); /* Stronger shadow at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+}
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+.footer-links-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+    .footer-links-group {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+}
+.footer-link {
+    color: var(--color-primary-green); /* Green links */
+    font-weight: 500;
+    margin: 0.5rem 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.footer-link:hover {
+    color: var(--color-light-gray);
+    text-shadow: 0 0 10px var(--color-primary-green);
+}
+.back-to-top {
+    background: linear-gradient(to right, var(--color-primary-green), var(--color-accent-green));
+    color: var(--color-darkest-black);
+    padding: 0.9rem 1.8rem; /* Larger button */
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.7); /* Stronger glow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem; /* Space from other footer content */
+}
+.back-to-top:hover {
+    transform: translateY(-5px) scale(1.08); /* More lift and zoom */
+    box-shadow: 0 10px 25px rgba(0, 255, 0, 0.9); /* Intense glow on hover */
+    background: linear-gradient(to right, var(--color-accent-green), var(--color-primary-green)); /* Reverse gradient on hover */
+}
+.back-to-top svg {
+    margin-right: 0.75rem;
+    width: 1.5rem; /* Larger icon */
+    height: 1.5rem;
+}

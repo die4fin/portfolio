@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn's Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Poppins Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <!-- In a real project, you would link to a file like this: <link rel="stylesheet" href="style.css"> -->
+    <!-- For this Canvas environment, the CSS is in a separate immersive block. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-700">
+    <!-- Navbar -->
+    <nav class="navbar fixed top-0 left-0 right-0 w-full py-3 px-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="#top" class="navbar-logo">Finn's Portfolio</a>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#academic" class="nav-link">Academic</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#skills" class="nav-link">Skills</a>
+        </div>
+        <!-- Mobile menu button (optional, can be added later) -->
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+
+        <!-- Header Section -->
+        <header id="top" class="text-center py-12 bg-gray-900 rounded-xl shadow-2xl mb-12 border border-gray-800 relative overflow-hidden">
+            <!-- Subtle background pattern for header -->
+            <div class="absolute inset-0 z-0 opacity-10" style="background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%231f2937" fill-opacity="0.1"><circle cx="25" cy="25" r="2"/><circle cx="75" cy="75" r="2"/><circle cx="25" cy="75" r="2"/><circle cx="75" cy="25" r="2"/></g></svg>'); background-size: 35px 35px;"></div>
+            <div class="relative z-10">
+                <img src="Your Photo.jpg" alt="Your Photo" class="w-48 h-50 rounded-full mx-auto mb-8 border-8 border-green-500 shadow-xl transform transition-transform duration-300 hover:scale-105 hover:rotate-3">
+                <h1 class="text-6xl font-extrabold text-white mb-4 tracking-wider text-shadow-lg">Ihsanul Arifin Ramadhani</h1>
+                <p class="text-3xl text-green-400 font-light tracking-wide">International Undergraduate Student | Informatics Engineering</p>
+                <p class="text-xl text-gray-400 mt-4">Mercu Buana University, Jakarta, Indonesia</p>
+            </div>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about" class="card fade-in-section">
+            <h2 class="text-4xl section-title">About Me</h2>
+            <p class="mb-4 text-gray-300 leading-relaxed text-shadow-sm" id="about-me-text">
+                As a dedicated and driven sixth-semester International Undergraduate Program student at Mercu Buana University Jakarta, majoring in <strong>Informatics Engineering (specializing in Data Science)</strong>, I am a recipient of an exclusive 4-year full tuition scholarship. My academic journey is marked by a strong GPA of 3.65 out of 4.00, with 127 semester credit units completed, demonstrating my commitment to excellence and a passion for continuous learning.
+            </p>
+            <p class="mb-4 text-gray-300 leading-relaxed text-shadow-sm">
+                I am particularly interested in <strong>Data Science</strong> and <strong>Front-End Programming</strong>, constantly seeking opportunities to apply theoretical knowledge to real-world challenges. My proficiency in <strong>English</strong> is strong, honed through daily campus conversations, and I am also developing skills in <strong>German</strong>. Beyond technical abilities, I pride myself on my <strong>public speaking, presentation skills (especially in English), critical thinking, and coordinating abilities.</strong> I am on track to complete my final thesis in the 7th semester, aiming for a 3.5-year study duration.
+            </p>
+        </section>
+
+        <!-- Academic Experience Section -->
+        <section id="academic" class="card fade-in-section">
+            <h2 class="text-4xl section-title">Academic Experience</h2>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2m2-2a4 4 0 004 4h2a4 4 0 004-4m-7-9l2 2m0 0l2-2m-2 2v5a4 4 0 01-4 4H2a4 4 0 01-4-4v-5m10 0V5a2 2 0 012-2h2a2 2 0 012 2v5m-6 0h6"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Exchange Program Participant</h3>
+                    <p class="text-gray-400 text-lg">Universiti Malaysia Kelantan, Malaysia</p>
+                    <p class="text-base text-gray-500">3rd Semester (September 2023 - January 2024)</p>
+                    <p class="mt-2 text-gray-300 leading-relaxed text-shadow-sm">Gained international academic exposure and broadened perspectives through a semester-long exchange program.</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2m2-2a4 4 0 004 4h2a4 4 0 004-4m-7-9l2 2m0 0l2-2m-2 2v5a4 4 0 01-4 4H2a4 4 0 01-4-4v-5m10 0V5a2 2 0 012-2h2a2 2 0 012 2v5m-6 0h6"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Exchange Program Participant</h3>
+                    <p class="text-gray-400 text-lg">Gadjah Mada University, Yogyakarta, Indonesia</p>
+                    <p class="text-base text-gray-500">5th Semester (August 2024 - December 2024)</p>
+                    <p class="mt-2 text-gray-300 leading-relaxed text-shadow-sm">Further enriched academic and cultural understanding through an exchange program at a leading Indonesian university.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+                        <img src="Gadjah Mada Exchange Photo 1.jpg" alt="Gadjah Mada Exchange Photo 1" class="w-full h-auto rounded-lg shadow-xl">
+                        <img src="Gadjah Mada Exchange Photo 2.jpg" alt="Gadjah Mada Exchange Photo 2" class="w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work" class="card fade-in-section">
+            <h2 class="text-4xl section-title">Work Experience</h2>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-1.208-8.455-3.245m16.319-2.19A23.931 23.931 0 0012 9c-3.183 0-6.22-1.208-8.455-3.245M4 5v14m0 0h16a2 2 0 002-2V7a2 2 0 00-2-2H4zm1 5h10a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">SEO Intern</h3>
+                    <p class="text-gray-400 text-lg">Ultra Cool Company (PT Bhakti Nusa Bahtera), Jakarta (WFH)</p>
+                    <p class="text-base text-gray-500">April 2025 - July 2025</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-300 leading-relaxed text-shadow-sm">
+                        <li>Contributed to enhancing online visibility for Ultra Cool, an innovative, eco-friendly ice cube alternative.</li>
+                        <li>Applied SEO strategies to a product highly utilized by restaurants, hotels, and medical institutions.</li>
+                        <li>Gained practical experience in digital marketing and content optimization within a dynamic startup environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10v6a2 2 0 002 2h14a2 2 0 002-2v-6m-4 0a2 2 0 00-2-2h-4a2 2 0 00-2 2m0 0V9a2 2 0 012-2h4a2 2 0 012 2v1m-4 0h.01M7 12h.01M12 12h.01M17 12h.01"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Part-Time Barista & Business Analysis Support</h3>
+                    <p class="text-gray-400 text-lg">Baratugu Coffee Shop, Yogyakarta</p>
+                    <p class="text-base text-gray-500">September 2024 - December 2024</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-300 leading-relaxed text-shadow-sm">
+                        <li>Managed daily coffee shop operations, enhancing customer service and operational efficiency.</li>
+                        <li>Slightly involved in business analysis, applying entry-level knowledge to real-world business challenges.</li>
+                        <li>Gained valuable insights into small business operations and learned from seasoned professionals in a dynamic environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Assignment Helper</h3>
+                    <p class="text-gray-400 text-lg">Joki Tugas</p>
+                    <p class="text-base text-gray-500">Various Dates</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-300 leading-relaxed text-shadow-sm">
+                        <li>Assisted in the completion of diverse academic assignments, demonstrating versatility and a strong grasp of various subjects.</li>
+                        <li>Key assignments included:
+                            <ul class="list-circle list-inside ml-4 mt-1">
+                                <li>Brochure design and content creation.</li>
+                                <li>Reports on Corporate and Human Relations.</li>
+                                <li>Paperwork for "Social Planning to Reduce Stunting in Abang Village, Karangasem Regency".</li>
+                                <li>Press Release Posters/Brochures.</li>
+                                <li>Paperwork for a Car Showroom Business Proposal.</li>
+                                <li>News Article Writing.</li>
+                            </ul>
+                        </li>
+                        <li>Developed strong research, writing, and presentation skills across different academic and business contexts.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="card fade-in-section">
+            <h2 class="text-4xl section-title">Research & Projects</h2>
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5a2 2 0 00-2-2H9a2 2 0 00-2 2v5m3 0h.01M12 12h.01M15 12h.01M12 7h.01"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Research Proposal: AI for Wine Quality Assessment</h3>
+                    <p class="text-gray-400 text-lg">Research Methodology for Information Technology (6th Semester)</p>
+                    <p class="text-base text-gray-500">Topic: AI for Wine Quality Assessment Using Shapley Additive Explanations to Interpret Feature Importance in XGBoost Models</p>
+                    <p class="mt-2 text-gray-300 leading-relaxed text-shadow-sm">Developed a comprehensive research proposal exploring the application of AI, specifically XGBoost models with SHAP interpretations, for assessing wine quality. This foundational work will lead to my final thesis in the 7th semester, demonstrating my capability to conduct in-depth technical research.</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Application of IoT in Environmental Monitoring System</h3>
+                    <p class="text-gray-400 text-lg">At Gadjah Mada University</p>
+                    <p class="text-base text-gray-500">Project with Visualisation of Temperature and Humidity Data</p>
+                    <p class="mt-2 text-gray-300 leading-relaxed text-shadow-sm">This project designs an IoT-based environmental monitoring system using ESP32, DHT22, LCD I2C, and LEDs, simulated via Wokwi and visualized through ThingSpeak, enabling real-time temperature-humidity tracking with clear visual alerts and no physical hardware.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+                        <img src="IoT Project Photo 1.png" alt="IoT Project Photo 1" class="w-full h-auto rounded-lg shadow-xl">
+                        <img src="IoT Project Photo 2.png" alt="IoT Project Photo 2" class="w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">DDoS Web Stress Test Project</h3>
+                    <p class="text-gray-400 text-lg">At Gadjah Mada University</p>
+                    <p class="mt-2 text-gray-300 leading-relaxed text-shadow-sm">The Stress Test document is a tool used to test server performance by running multiple HTTP GET requests in parallel, identifying issues and improving server performance by analyzing various components like requests, threads, and log files.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+                        <img src="DDoS Project Photo 1.png" alt="DDoS Project Photo 1" class="w-full h-auto rounded-lg shadow-xl">
+                        <img src="DDoS Project Photo 2.png" alt="DDoS Project Photo 2" class="w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="icon">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2 2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6-4h.01"></path></svg>
+                </div>
+                <div class="content">
+                    <h3 class="text-2xl font-semibold text-gray-100">Agency Website Creation</h3>
+                    <p class="text-gray-400 text-lg">As an Assignment Helper</p>
+                    <p class="mt-2 text-gray-300 leading-relaxed text-shadow-sm">Designed and developed a functional agency website as part of an assignment, showcasing skills in web design, front-end development, and content presentation for a professional online presence.</p>
+                    <div class="grid grid-cols-1 gap-8 mt-8">
+                        <img src="Agency Website Project Photo 1.png" alt="Agency Website Project Photo 1" class="w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="card fade-in-section">
+            <h2 class="text-4xl section-title">Skills</h2>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-100 mb-4">Technical Skills:</h3>
+                <div class="flex flex-wrap" id="technical-skills">
+                    <span class="skill-badge">Data Science <button class="explain-skill" data-skill="Data Science">✨</button></span>
+                    <span class="skill-badge">Machine Learning <button class="explain-skill" data-skill="Machine Learning">✨</button></span>
+                    <span class="skill-badge">Python <button class="explain-skill" data-skill="Python">✨</button></span>
+                    <span class="skill-badge">R <button class="explain-skill" data-skill="R">✨</button></span>
+                    <span class="skill-badge">SQL <button class="explain-skill" data-skill="SQL">✨</button></span>
+                    <span class="skill-badge">Front-End Development <button class="explain-skill" data-skill="Front-End Development">✨</button></span>
+                    <span class="skill-badge">HTML <button class="explain-skill" data-skill="HTML">✨</button></span>
+                    <span class="skill-badge">CSS (Tailwind CSS) <button class="explain-skill" data-skill="CSS (Tailwind CSS)">✨</button></span>
+                    <span class="skill-badge">JavaScript <button class="explain-skill" data-skill="JavaScript">✨</button></span>
+                    <span class="skill-badge">Git/GitHub <button class="explain-skill" data-skill="Git/GitHub">✨</button></span>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-100 mb-4">Languages:</h3>
+                <div class="flex flex-wrap" id="language-skills">
+                    <span class="skill-badge">English (Fluent) <button class="explain-skill" data-skill="English (Fluent)">✨</button></span>
+                    <span class="skill-badge">Indonesian (Native) <button class="explain-skill" data-skill="Indonesian (Native)">✨</button></span>
+                    <span class="skill-badge">German (Intermediate) <button class="explain-skill" data-skill="German (Intermediate)">✨</button></span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-100 mb-4">Soft Skills:</h3>
+                <div class="flex flex-wrap" id="soft-skills">
+                    <span class="skill-badge">Public Speaking <button class="explain-skill" data-skill="Public Speaking">✨</button></span>
+                    <span class="skill-badge">Presentation Skills <button class="explain-skill" data-skill="Presentation Skills">✨</button></span>
+                    <span class="skill-badge">Critical Thinking <button class="explain-skill" data-skill="Critical Thinking">✨</button></span>
+                    <span class="skill-badge">Coordination <button class="explain-skill" data-skill="Coordination">✨</button></span>
+                    <span class="skill-badge">Teamwork <button class="explain-skill" data-skill="Teamwork">✨</button></span>
+                    <span class="skill-badge">Problem-Solving <button class="explain-skill" data-skill="Problem-Solving">✨</button></span>
+                    <span class="skill-badge">Adaptability <button class="explain-skill" data-skill="Adaptability">✨</button></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="main-footer text-gray-400 text-sm">
+            <div class="footer-content">
+                <p class="mb-4 md:mb-0 text-base">&copy; 2025 die4finn. All rights reserved.</p>
+                <div class="footer-links-group">
+                    <a href="die4finn@gmail.com" class="footer-link">Email</a>
+                    <a href="https://www.instagram.com/onlyfinnnsss/" class="footer-link">Instagram</a>
+                    <a href="https://www.tiktok.com/@arcticoyote?lang=id-ID" class="footer-link">TikTok</a>
+                </div>
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="back-to-top">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                    Back to Top
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for LLM response -->
+    <div id="skillExplanationModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 class="text-2xl font-semibold mb-6 text-white">Skill Explanation</h3>
+            <div id="modalContent" class="text-gray-300 text-lg">
+                <div class="spinner"></div>
+                <p class="text-center mt-6">Generating explanation...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Portfolio page loaded successfully!');
+
+            const explainButtons = document.querySelectorAll('.explain-skill');
+            const modal = document.getElementById('skillExplanationModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeButton = document.querySelector('.close-button');
+            const aboutMeText = document.getElementById('about-me-text').innerText;
+
+            // Function to show the modal with loading state
+            function showLoadingModal() {
+                modalContent.innerHTML = '<div class="spinner"></div><p class="text-center mt-6 text-gray-400">Generating explanation...</p>';
+                modal.classList.remove('hidden');
+            }
+
+            // Function to hide the modal
+            function hideModal() {
+                modal.classList.add('hidden');
+            }
+
+            // Event listener for close button
+            closeButton.addEventListener('click', hideModal);
+
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    hideModal();
+                }
+            });
+
+            explainButtons.forEach(button => {
+                button.addEventListener('click', async function() {
+                    const skill = this.dataset.skill;
+                    showLoadingModal();
+
+                    try {
+                        let chatHistory = [];
+                        const prompt = `Given the following information about a student's profile:\n\n"${aboutMeText}"\n\nPlease provide a concise explanation of the skill "${skill}" and its relevance to this student's profile and interests (Data Science, Front-End Programming). Keep the explanation to 2-3 sentences.`;
+
+                        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                        const payload = { contents: chatHistory };
+                        const apiKey = ""; // Canvas will automatically provide the API key
+                        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        const result = await response.json();
+
+                        if (result.candidates && result.candidates.length > 0 &&
+                            result.candidates[0].content && result.candidates[0].content.parts &&
+                            result.candidates[0].content.parts.length > 0) {
+                            const text = result.candidates[0].content.parts[0].text;
+                            modalContent.innerHTML = `<p>${text}</p>`;
+                        } else {
+                            modalContent.innerHTML = '<p class="text-red-500">Error: Could not generate explanation. Please try again.</p>';
+                            console.error('Gemini API response structure unexpected:', result);
+                        }
+                    } catch (error) {
+                        modalContent.innerHTML = '<p class="text-red-500">Error: Failed to connect to the API. Please check your network connection.</p>';
+                        console.error('Error calling Gemini API:', error);
+                    }
+                });
+            });
+
+            // Intersection Observer for fade-in on scroll
+            const fadeInSections = document.querySelectorAll('.card'); // Target all cards for fade-in
+
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            }, observerOptions);
+
+            fadeInSections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Navbar active state on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function highlightNavLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100; // Adjusted for fixed navbar height
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavLink);
+            highlightNavLink(); // Call on load to set initial active link
+        });
+    </script>
+</body>
+</html>
