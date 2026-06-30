@@ -1,1 +1,26 @@
-{ "Meta": { "title": "Portofolio" } }
+{
+  "Meta": {
+    "title": "Portofolio"
+  },
+  "Hero": {
+    "badge": "Arsitektur Platform Baseline v1.0",
+    "title": "REKAYASA SISTEM",
+    "description": "Platform pemenang penghargaan yang dirancang untuk performa mutlak, tipografi editorial fidelitas tinggi, dan antarmuka tata letak desain sistem yang aksesibel."
+  },
+  "Projects": {
+    "title": "Karya Pilihan",
+    "viewProject": "Lihat Studi Kasus",
+    "items": {
+      "ecoVerse": {
+        "title": "EcoVerse",
+        "category": "Web3 & Teknologi Iklim",
+        "description": "Platform Pemenang Juara 1 untuk hackathon kewirausahaan hijau, berfokus pada manajemen aset digital berkelanjutan."
+      },
+      "farmShield": {
+        "title": "FarmShield 360",
+        "category": "AI & Agrikultur",
+        "description": "Antarmuka pertanian tangguh iklim pemenang Medali Emas yang mendukung model manajemen prediksi hasil panen."
+      }
+    }
+  }
+}

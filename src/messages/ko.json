@@ -1,1 +1,26 @@
-{ "Meta": { "title": "포트폴리오" } }
+{
+  "Meta": {
+    "title": "포트폴리오"
+  },
+  "Hero": {
+    "badge": "아키텍처 플랫폼 베이스라인 v1.0",
+    "title": "시스템 엔지니어링",
+    "description": "절대적인 성능, 고해상도 에디토리얼 타이포그래피, 접근 가능한 시스템 디자인 레이아웃 인터페이스를 위해 설계된 수상 경력의 플랫폼입니다."
+  },
+  "Projects": {
+    "title": "엄선된 프로젝트",
+    "viewProject": "케이스 스터디 보기",
+    "items": {
+      "ecoVerse": {
+        "title": "EcoVerse",
+        "category": "Web3 및 기후 기술",
+        "description": "지속 가능한 디지털 자산 관리에 초점을 맞춘 녹색 엔전트러프러너십 해커톤 1위 수상 플랫폼."
+      },
+      "farmShield": {
+        "title": "FarmShield 360",
+        "category": "AI 및 농업 과학",
+        "description": "예측 작물 관리 모델을 구동하는 금메달 수상 기후 회복형 농업 인터페이스."
+      }
+    }
+  }
+}

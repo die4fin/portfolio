@@ -1,1 +1,26 @@
-{ "Meta": { "title": "Portfolio" } }
+{
+  "Meta": {
+    "title": "Portfolio"
+  },
+  "Hero": {
+    "badge": "Architectural Platform Baseline v1.0",
+    "title": "SYSTEMS ENGINEERING",
+    "description": "An award-winning platform engineered for absolute performance, high-fidelity editorial typography, and accessible system design layout interfaces."
+  },
+  "Projects": {
+    "title": "Selected Works",
+    "viewProject": "View Case Study",
+    "items": {
+      "ecoVerse": {
+        "title": "EcoVerse",
+        "category": "Web3 & Climate-Tech",
+        "description": "1st Place Award Winner platform for green entrepreneurship hackathons, focused on sustainable digital asset management."
+      },
+      "farmShield": {
+        "title": "FarmShield 360",
+        "category": "AI & Agriculture",
+        "description": "Gold Medal award-winning climate-resilient farming interface empowering predictive crop management models."
+      }
+    }
+  }
+}
