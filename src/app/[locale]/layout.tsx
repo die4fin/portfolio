@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { sansKR, sansSans, serifZH } from "../fonts";
 import "@/app/globals.css";
 import "@/env.ts";
+import { Footer } from "@/components/layout/Footer";
+import { Navigation } from "@/components/layout/Navigation";
 import { type SupportedLocales, routing } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -18,7 +20,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   const locale = useLocale();
 
-  // Konfigurasi aman tanpa 'any' dengan menegaskan string ke tipe SupportedLocales
   if (!routing.locales.includes(locale as SupportedLocales)) {
     notFound();
   }
@@ -29,7 +30,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={`${sansSans.variable} ${serifZH.variable} ${sansKR.variable}`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>{children}</body>
+      <body
+        suppressHydrationWarning
+        className="flex min-h-screen flex-col bg-[var(--color-bg-canvas)] antialiased"
+      >
+        <Navigation />
+        {/* Konten Utama Terisolasi secara Elastis */}
+        <div className="flex-1">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
